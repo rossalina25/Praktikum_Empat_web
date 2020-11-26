@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image</title>
+</head>
+<body style="margin: 100px;">
+    <h1> IMAGE PICKER</h1>
+    <center>
+        <select onchange="gantigambar()" id="listgambar">		
+                <option value="hello.jpg">Pilih Image Cartoon</option>
+                <option value="tiger.png">Tiger</option>
+                <option value="pooh.jpg">Pooh</option>	
+                <option value="Sincan.jpg">Sincan</option>
+                <option value="stitch.png">Stitch</option>
+                <option value="charlie brown.jpg">Charlie Brown</option>
+        </select>
+    </center>
+        <br></br>
+        <img src="hello.jpg" style="width: 40%" id="gambar">
+
+</body>
+<script type="text/javascript">	
+    function gantigambar() {		
+    let gambar = document.getElementById("listgambar").value;		
+    document.getElementById("gambar").src = gambar;		
+    alert("Gambar " + gambar);	
+    }
+</script>
+</html>

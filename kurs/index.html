@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kurs</title>
+	<style type="text/css">
+       
+	</style>	
+</head>
+<body>
+	<form action="">
+		<fieldset>
+			<legend><h1>Mata Uang Asing</h1></legend>
+			<table style="background-color:transparent;" border="3" style="width: 50%">
+				<tr>
+					<th>Masukan Nilai</th>
+					<th>Value</th>
+					<th>Nilai Rupiah</th>
+				</tr>
+				<tr>
+                	<td><input type="text" name="nilai" id="nilai" onkeyup="jumlah()"></td>
+            		<td><select name="mata_uang" id="mata_uang" onchange="jumlah()">
+                        <option value="0" disabled selected>Choose Mata Uang</option>
+                        <option value="9915">Dollar US</option>
+                        <option value="13472">Dollar Singapore</option>
+                        <option value="874">Ringgit Malaysia</option>
+                        <option value="120">Yen Jepang</option>
+                        <option value="15888">Euro</option>
+                        <option value="3592">Riyal Arab Saudi</option>
+                		</select></td>
+            	<td><input type="text" name="nilai_rupiah" id="nilai_rupiah" placeholder="------" disabled=""></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>	
+
+	<script>
+        function jumlah() {
+            const nilai = Number(document.getElementById("nilai").value);
+            const mata_uang = document.getElementById("mata_uang").value;
+
+            let total = nilai * mata_uang;
+
+            document.getElementById("nilai_rupiah").value = ("Rp. ") + total;
+        }       
+    </script>
+</body>
+</html>

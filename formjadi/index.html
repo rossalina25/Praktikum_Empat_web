@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Validation</title>
+    <style type="text/css">
+        body{ 
+            background-color:antiquewhite;
+        } 
+	</style>	
+</head>
+<body style="text-align: center;">
+        <h1>Ticket Flight</h1> 
+        <hr width="11%" align="center">
+		</div>
+	<div id="form"></div>
+    
+            <form method="RequeST"> 
+
+                Name :<br>
+                <input type="text" required="" maxlength="35" placeholder="Enter Your Name" id="name" name="name"></br>
+                Email :<br>
+                <input type="email" required="" placeholder="@" id="email" name="email"></br>
+                Time Flight :<br>
+                <input type="time" required="" placeholder="time" id="time" name="time"></br>
+                Destination :<br>
+                <input type="text" required="" placeholder="" id="Destination" name="Destination"></br>
+                Maskapai  :<br>
+                <input type="text" required="" placeholder="" id="maskapai" name="maskapai"></br>
+                Jumlah Tiket Yang Dipesan :<br>
+                <input type="number" required="" max="10" placeholder="Jumlah Tiket" id="tiket" name="tiket"></br>
+                <button type="submit" onclick="return login()">SUBMIT</button>
+            </form>
+    
+</body>
+<script>
+    function login() {
+        let name = document.getElementById("name").value;
+		let email = document.getElementById("email").value;
+
+        if (name == "" || email == "") {
+			alert("Email harus diisi!!");
+			return false;
+        }
+    }
+</script>
+</html>

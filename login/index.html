@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <style type="text/css">
+        body{ 
+            background-color:bisque(163, 236, 79, 0.589);
+        } 
+	</style>	
+</head>
+<body style="text-align: center;">
+        <h1>STT Terpadu Nurul Fikri</h1> 
+        <h2>Login</h2>
+        <hr width="11%" align="center">
+		</div>
+	<div id="form"></div>
+    
+            <form method="RequeST"> 
+
+                Email / Nomor Telepon :<br>
+                <input type="email" required="" placeholder="email/nomor Telepon" id="email" name="email"></br>
+                Password :<br>
+                <input type="password" required="" placeholder="" id="password" name="password"></br>
+                
+                <button type="submit" onclick="return login()">SUBMIT</button>
+            </form>
+    
+</body>
+<script>
+    function login() {
+        let email = document.getElementById("email").value;
+		let password = document.getElementById("password").value;
+
+        if (email == "" || password == "") {
+			alert("Email atau Password anda harus diisi!!");
+			return false;
+        }
+    }
+</script>
+</html>
